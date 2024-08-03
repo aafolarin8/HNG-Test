@@ -1,0 +1,1449 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "b1f8b360-523f-4f69-94bd-49bfd7cf4732",
+            "name": "Platzi Fake Store API",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "updatedAt": "2024-05-17T13:44:49.000Z",
+            "createdAt": "2024-05-17T13:44:49.000Z",
+            "lastUpdatedBy": "32444128",
+            "uid": "32444128-b1f8b360-523f-4f69-94bd-49bfd7cf4732"
+        },
+        "item": [
+            {
+                "name": "Rest API",
+                "item": [
+                    {
+                        "name": "products",
+                        "item": [
+                            {
+                                "name": "getAll",
+                                "id": "2811ae21-4f8e-4eb4-b34f-3827ae6bc922",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/products/",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "products",
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-2811ae21-4f8e-4eb4-b34f-3827ae6bc922"
+                            },
+                            {
+                                "name": "getOne",
+                                "id": "96263d55-e640-46d8-b4dd-df15eb00e6c3",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/products/120",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "products",
+                                            "120"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-96263d55-e640-46d8-b4dd-df15eb00e6c3"
+                            },
+                            {
+                                "name": "create",
+                                "id": "c844f036-0361-445e-8d7d-3fe4d140a584",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n    \"title\": \"New Product\",\r\n    \"price\": 10,\r\n    \"description\": \"A description\",\r\n    \"categoryId\": 1,\r\n    \"images\": [\r\n        \"https://placeimg.com/640/480/any\"\r\n    ]\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/products/",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "products",
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-c844f036-0361-445e-8d7d-3fe4d140a584"
+                            },
+                            {
+                                "name": "update",
+                                "id": "91ea6896-abcf-4d31-95b1-98d91d7e70a5",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n    \"title\": \"Change title\",\r\n    \"price\": 100,\r\n    \"images\": [\r\n        \"https://placeimg.com/640/480/any\"\r\n    ]\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/products/1",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "products",
+                                            "1"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-91ea6896-abcf-4d31-95b1-98d91d7e70a5"
+                            },
+                            {
+                                "name": "pagination",
+                                "id": "6a4f9376-6e99-4a79-bb7a-d11aa50d8b2a",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/products/?offset=0&limit=10",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "products",
+                                            ""
+                                        ],
+                                        "query": [
+                                            {
+                                                "key": "offset",
+                                                "value": "0"
+                                            },
+                                            {
+                                                "key": "limit",
+                                                "value": "10"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-6a4f9376-6e99-4a79-bb7a-d11aa50d8b2a"
+                            }
+                        ],
+                        "id": "8b3d69b0-cf36-45ee-947f-6526c1586606",
+                        "uid": "32444128-8b3d69b0-cf36-45ee-947f-6526c1586606"
+                    },
+                    {
+                        "name": "categories",
+                        "item": [
+                            {
+                                "name": "getAll",
+                                "id": "a7f0f213-35ce-42f8-97be-995f1457936a",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/categories/",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "categories",
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-a7f0f213-35ce-42f8-97be-995f1457936a"
+                            },
+                            {
+                                "name": "getOne",
+                                "id": "fa373a5a-4e7d-4421-92b0-5d35cda79d2a",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/categories/1",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "categories",
+                                            "1"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-fa373a5a-4e7d-4421-92b0-5d35cda79d2a"
+                            },
+                            {
+                                "name": "update",
+                                "id": "de634814-a478-4f05-a040-135b15a612df",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n\t\"name\": \"nuevo\"\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/categories/1",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "categories",
+                                            "1"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-de634814-a478-4f05-a040-135b15a612df"
+                            },
+                            {
+                                "name": "create",
+                                "id": "50baa205-81dd-4096-b35e-21960ce42f95",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n  \"name\": \"Books\",\r\n  \"image\": \"https://api.lorem.space/image/book?w=150&h=220\"\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/categories/",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "categories",
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-50baa205-81dd-4096-b35e-21960ce42f95"
+                            }
+                        ],
+                        "id": "042915f2-df1e-4348-9dda-23565b7f0ab6",
+                        "uid": "32444128-042915f2-df1e-4348-9dda-23565b7f0ab6"
+                    },
+                    {
+                        "name": "users",
+                        "item": [
+                            {
+                                "name": "getAll",
+                                "id": "4ef5ab5b-d9df-4b37-bd44-e70231efb1d4",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/users/",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "users",
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-4ef5ab5b-d9df-4b37-bd44-e70231efb1d4"
+                            },
+                            {
+                                "name": "getOne",
+                                "id": "15fe0b82-419a-4ce8-b7ee-7f06b9a9cc07",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/users/1",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "users",
+                                            "1"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-15fe0b82-419a-4ce8-b7ee-7f06b9a9cc07"
+                            },
+                            {
+                                "name": "update",
+                                "id": "0c1d9f53-0bfd-4d90-8bf6-1b9529bfd85f",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "PUT",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n\t\"name\": \"Nicolas\"\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/users/1",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "users",
+                                            "1"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-0c1d9f53-0bfd-4d90-8bf6-1b9529bfd85f"
+                            },
+                            {
+                                "name": "create",
+                                "id": "70ac181a-4282-4d59-bdde-be140a698711",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n\t\"name\": \"Nicolas\",\r\n\t\"email\": \"nico@gmail.com\",\r\n\t\"password\": \"123\",\r\n    \"avatar\": \"https://api.lorem.space/image/face?w=640&h=480\"\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/users/",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "users",
+                                            ""
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-70ac181a-4282-4d59-bdde-be140a698711"
+                            },
+                            {
+                                "name": "isAvailable",
+                                "id": "b9cc9960-1758-4f6b-844a-d2b56b0926b2",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n\t\"email\": \"maria@mail.com\"\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/users/is-available",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "users",
+                                            "is-available"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-b9cc9960-1758-4f6b-844a-d2b56b0926b2"
+                            }
+                        ],
+                        "id": "b4263ee8-d9e5-42bd-b2a9-cc32c826e04b",
+                        "uid": "32444128-b4263ee8-d9e5-42bd-b2a9-cc32c826e04b"
+                    },
+                    {
+                        "name": "auth",
+                        "item": [
+                            {
+                                "name": "login",
+                                "id": "333c82df-142f-44c1-b2a3-e51b470da357",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\r\n\t\"email\": \"john@mail.com\",\r\n\t\"password\": \"changeme\"\r\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/auth/login",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "login"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-333c82df-142f-44c1-b2a3-e51b470da357"
+                            },
+                            {
+                                "name": "profile",
+                                "id": "ffadcad9-851d-40dd-b83b-3c7f5e759bc9",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "auth": {
+                                        "type": "bearer",
+                                        "bearer": [
+                                            {
+                                                "key": "token",
+                                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AbWFpbC5jb20iLCJzdWIiOjEsImlhdCI6MTY0OTg4MTQ2NiwiZXhwIjoxNjQ5ODg1MDY2fQ.yVveqqmu6u3lN2UK0McQcfU9-vh8T6iDb6y-mHPhyzA",
+                                                "type": "string"
+                                            }
+                                        ]
+                                    },
+                                    "method": "GET",
+                                    "header": [],
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/auth/profile",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "auth",
+                                            "profile"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-ffadcad9-851d-40dd-b83b-3c7f5e759bc9"
+                            }
+                        ],
+                        "id": "8b354fa8-7b05-4096-9e29-08a8cb5448d6",
+                        "uid": "32444128-8b354fa8-7b05-4096-9e29-08a8cb5448d6"
+                    },
+                    {
+                        "name": "files",
+                        "item": [
+                            {
+                                "name": "upload",
+                                "id": "114a18a6-ddb7-442b-8e1a-d65ac48af817",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "formdata",
+                                        "formdata": [
+                                            {
+                                                "key": "file",
+                                                "type": "file",
+                                                "src": "/C:/Users/nicob/Downloads/Step3-graphic-1.png"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/files/upload",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "files",
+                                            "upload"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-114a18a6-ddb7-442b-8e1a-d65ac48af817"
+                            },
+                            {
+                                "name": "file",
+                                "id": "9ab341c5-fa13-430e-92c1-28468bf5a40c",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "GET",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "formdata",
+                                        "formdata": [
+                                            {
+                                                "key": "file",
+                                                "type": "file",
+                                                "src": "/C:/Users/nicob/Downloads/Step3-graphic-1.png"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/api/v1/files/4c8b.png",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "v1",
+                                            "files",
+                                            "4c8b.png"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-9ab341c5-fa13-430e-92c1-28468bf5a40c"
+                            }
+                        ],
+                        "id": "e646b740-b9aa-4e4f-84d7-154d838c4c8b",
+                        "uid": "32444128-e646b740-b9aa-4e4f-84d7-154d838c4c8b"
+                    }
+                ],
+                "id": "d717b0ba-fdeb-44ee-9bd9-c4f742885979",
+                "uid": "32444128-d717b0ba-fdeb-44ee-9bd9-c4f742885979"
+            },
+            {
+                "name": "GraphQL",
+                "item": [
+                    {
+                        "name": "products",
+                        "item": [
+                            {
+                                "name": "getAll",
+                                "id": "f61f42ba-10fb-4a8d-812e-35056b898864",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n  products{\r\n\t\tid\r\n    title\r\n    price\r\n\t\tdescription\r\n\t\timages\r\n\t\tcategory {\r\n\t\t\tid\r\n\t\t\tname\r\n\t\t\timage\r\n\t\t}\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-f61f42ba-10fb-4a8d-812e-35056b898864"
+                            },
+                            {
+                                "name": "getOne",
+                                "id": "52a56e58-40a6-4cf6-8190-1d641a25d428",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n\tproduct(id: \"120\") {\r\n\t\ttitle\r\n\t\tprice\r\n\t\timages\r\n\t\tcategory {\r\n\t\t\tid\r\n\t\t\tname\r\n\t\t\timage\r\n\t\t}\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-52a56e58-40a6-4cf6-8190-1d641a25d428"
+                            },
+                            {
+                                "name": "create",
+                                "id": "51a7039d-984f-4964-bc5b-9ef2b8268f94",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\taddProduct(\r\n\t\tdata: {\r\n\t\t\ttitle: \"New Product\"\r\n\t\t\tprice: 10\r\n\t\t\tdescription: \"A description\"\r\n\t\t\tcategoryId: 1\r\n\t\t\timages: [\"https://placeimg.com/640/480/any\"]\r\n\t\t}\r\n\t) {\r\n\t\ttitle\r\n\t\tprice\r\n\t\timages\r\n\t\tcategory {\r\n\t\t\tid\r\n\t\t\tname\r\n\t\t\timage\r\n\t\t}\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-51a7039d-984f-4964-bc5b-9ef2b8268f94"
+                            },
+                            {
+                                "name": "update",
+                                "id": "6bc6145b-8618-4b93-b915-0481522574fc",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tupdateProduct(id: \"120\", changes: { title: \"udpate\" }) {\r\n\t\ttitle\r\n\t\tprice\r\n\t\timages\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-6bc6145b-8618-4b93-b915-0481522574fc"
+                            },
+                            {
+                                "name": "delete",
+                                "id": "5d738267-ca99-4b9c-be19-92b202f95cd7",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tdeleteProduct(id: 112)\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-5d738267-ca99-4b9c-be19-92b202f95cd7"
+                            },
+                            {
+                                "name": "pagination",
+                                "id": "3fc477c1-f8d8-4632-8d75-32664de744d4",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n  products(limit: 2, offset: 0){\r\n    title\r\n    price\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-3fc477c1-f8d8-4632-8d75-32664de744d4"
+                            },
+                            {
+                                "name": "by title",
+                                "id": "ffd1b72a-f596-444b-8064-d7760834e7d1",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n  products(title: \"Generic\"){\r\n    title\r\n    price\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-ffd1b72a-f596-444b-8064-d7760834e7d1"
+                            },
+                            {
+                                "name": "by range price",
+                                "id": "da89a5e6-c677-4b37-bf24-567681b4407c",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n\tproducts(price_min: 100, price_max: 200) {\r\n\t\ttitle\r\n\t\tprice\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-da89a5e6-c677-4b37-bf24-567681b4407c"
+                            },
+                            {
+                                "name": "by category",
+                                "id": "f2fb85ab-e85a-43c7-a973-d1b7495f0750",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n\tproducts(title: \"Generic\", categoryId: 1, price_min: 100, price_max: 1000) {\r\n\t\ttitle\r\n\t\tprice\r\n\t\tcategory {\r\n\t\t\tid\r\n\t\t\tname\r\n\t\t}\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-f2fb85ab-e85a-43c7-a973-d1b7495f0750"
+                            }
+                        ],
+                        "id": "bea085fa-5a08-4410-8dfe-170517fb9e0b",
+                        "uid": "32444128-bea085fa-5a08-4410-8dfe-170517fb9e0b"
+                    },
+                    {
+                        "name": "categories",
+                        "item": [
+                            {
+                                "name": "getAll",
+                                "id": "ff567b6d-04f8-401b-9b16-fdad765c8913",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n  categories{\r\n\t\tid\r\n\t\tname\r\n\t\timage\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-ff567b6d-04f8-401b-9b16-fdad765c8913"
+                            },
+                            {
+                                "name": "getOne",
+                                "id": "419922d5-e7a1-4988-b6af-eb0367d8a134",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n  category(id: 1){\r\n\t\tid\r\n\t\tname\r\n\t\timage\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-419922d5-e7a1-4988-b6af-eb0367d8a134"
+                            },
+                            {
+                                "name": "create",
+                                "id": "9f810812-74a7-4e1e-bcff-475da2d48fd4",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\taddCategory(\r\n\t\tdata: { name: \"New Category\", image: \"https://placeimg.com/640/480/any\" }\r\n\t) {\r\n\t\tid\r\n\t\tname\r\n\t\timage\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-9f810812-74a7-4e1e-bcff-475da2d48fd4"
+                            },
+                            {
+                                "name": "update",
+                                "id": "ab1c1360-f7d4-482a-8491-a761079fbf63",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tupdateCategory(id: 1, changes: { name: \"change\" }) {\r\n\t\tid\r\n\t\tname\r\n\t\timage\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-ab1c1360-f7d4-482a-8491-a761079fbf63"
+                            },
+                            {
+                                "name": "delete",
+                                "id": "5a19a458-2a73-4b22-a17b-02874ed94c0f",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tdeleteCategory(id: 14)\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-5a19a458-2a73-4b22-a17b-02874ed94c0f"
+                            }
+                        ],
+                        "id": "1419a093-b6c4-4fd2-b6d9-b536a20bbfd7",
+                        "uid": "32444128-1419a093-b6c4-4fd2-b6d9-b536a20bbfd7"
+                    },
+                    {
+                        "name": "users",
+                        "item": [
+                            {
+                                "name": "getAll",
+                                "id": "fa57c4bb-e89a-4083-b24a-3f2a1d1281e3",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n  users{\r\n\t\tid\r\n\t\tname\r\n\t\temail\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-fa57c4bb-e89a-4083-b24a-3f2a1d1281e3"
+                            },
+                            {
+                                "name": "getOne",
+                                "id": "85ec9aff-6bee-4e80-9d47-89e155e44629",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "query {\r\n  user(id: 1){\r\n\t\tid\r\n\t\tname\r\n\t\tavatar\r\n  }\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-85ec9aff-6bee-4e80-9d47-89e155e44629"
+                            },
+                            {
+                                "name": "create",
+                                "id": "d95aa09a-d1c6-4985-ad22-978b19b96a65",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\taddUser(\r\n\t\tdata: {\r\n\t\t\tname: \"Nicolas\"\r\n\t\t\temail: \"nico@gmail.com\"\r\n\t\t\tpassword: \"1234\"\r\n\t\t\tavatar: \"https://api.lorem.space/image/face?w=150&h=220\"\r\n\t\t}\r\n\t) {\r\n\t\tid\r\n\t\tname\r\n\t\tavatar\r\n\t}\r\n}",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-d95aa09a-d1c6-4985-ad22-978b19b96a65"
+                            },
+                            {
+                                "name": "update",
+                                "id": "f7c728ec-9849-4794-a53f-f225ab96b6c7",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tupdateUser(id: 1, changes: { name: \"change\" }) {\r\n\t\tid\r\n\t\tname\r\n\t\tavatar\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-f7c728ec-9849-4794-a53f-f225ab96b6c7"
+                            },
+                            {
+                                "name": "isAvailable",
+                                "id": "aad2dfd8-a7c1-4d3c-8f2b-3e390bbecf54",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "query {\r\n\tisAvailable(email: \"john@mail.com\")\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-aad2dfd8-a7c1-4d3c-8f2b-3e390bbecf54"
+                            },
+                            {
+                                "name": "delete",
+                                "id": "b745bd5c-3667-4cff-8c1a-6eb1fc988cac",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tdeleteUser(id: 1)\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-b745bd5c-3667-4cff-8c1a-6eb1fc988cac"
+                            }
+                        ],
+                        "id": "688f26b5-8e80-4eae-9e65-6c6a62ff5c2e",
+                        "uid": "32444128-688f26b5-8e80-4eae-9e65-6c6a62ff5c2e"
+                    },
+                    {
+                        "name": "auth",
+                        "item": [
+                            {
+                                "name": "login",
+                                "id": "06fce883-71b2-4367-872b-da3093100bb0",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\tlogin(email: \"john@mail.com\", password: \"changeme\") {\r\n\t\taccess_token\r\n\t\trefresh_token\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-06fce883-71b2-4367-872b-da3093100bb0"
+                            },
+                            {
+                                "name": "myProfile",
+                                "id": "91600118-c868-4e55-961b-79554884e291",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Authorization",
+                                            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc4MDE1OCwiZXhwIjoxNjc0NTA4MTU4fQ._UdU1WdRNaLW1sow633WEhKdxmdiFsJen-J2pjKgqu8"
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "{\r\n\tmyProfile {\r\n\t\tid\r\n\t\tname\r\n\t\tavatar\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-91600118-c868-4e55-961b-79554884e291"
+                            },
+                            {
+                                "name": "refreshToken",
+                                "id": "6ebb7259-daa6-4c5a-8657-e1d4623a7bbb",
+                                "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                },
+                                "request": {
+                                    "method": "POST",
+                                    "header": [],
+                                    "body": {
+                                        "mode": "graphql",
+                                        "graphql": {
+                                            "query": "mutation {\r\n\trefreshToken(\r\n\t\trefreshToken: \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc3ODY4MywiZXhwIjoxNjcyODE0NjgzfQ.XMjQQ6tTHAvy2ELrsYN0enWcQTo0PTeqb46-OrhUK7o\"\r\n\t) {\r\n\t\taccess_token\r\n\t\trefresh_token\r\n\t}\r\n}\r\n",
+                                            "variables": ""
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "https://api.escuelajs.co/graphql",
+                                        "protocol": "https",
+                                        "host": [
+                                            "api",
+                                            "escuelajs",
+                                            "co"
+                                        ],
+                                        "path": [
+                                            "graphql"
+                                        ]
+                                    }
+                                },
+                                "response": [],
+                                "uid": "32444128-6ebb7259-daa6-4c5a-8657-e1d4623a7bbb"
+                            }
+                        ],
+                        "id": "e6bdf755-3711-4f26-a52f-f90400d29ee9",
+                        "uid": "32444128-e6bdf755-3711-4f26-a52f-f90400d29ee9"
+                    }
+                ],
+                "id": "5f0b8134-92d7-4838-a887-21d1b4b98dc0",
+                "uid": "32444128-5f0b8134-92d7-4838-a887-21d1b4b98dc0"
+            }
+        ]
+    }
+}
